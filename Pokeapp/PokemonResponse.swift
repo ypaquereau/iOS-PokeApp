@@ -17,17 +17,24 @@ struct PokemonTypes: Codable {
 
 struct PokemonSprite: Codable {
     let front_default: String?
+    let front_shiny: String?
 }
 
 struct PokemonResponse: Codable {
+    let id: Int?
     let name: String?
     let sprites: PokemonSprite?
     let types: [PokemonTypes]
-    
+    let height: Int?
+    let weight: Int?
 }
 
-struct Pokemon: Codable {
+struct Pokemon {
+    let id: Int?
     let name: String?
-    let sprites: String?
+    let sprite: String?
     let types: String?
+    let sprite_shiny: String?
+    let height: Int?
+    let weight: Int?
 }

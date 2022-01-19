@@ -17,6 +17,7 @@
 		ECFA114A2798102700AE9C52 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA11492798102700AE9C52 /* PokemonTableViewCell.swift */; };
 		ECFA114D2798119300AE9C52 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ECFA114C2798119300AE9C52 /* Alamofire */; };
 		ECFA115027981F3D00AE9C52 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ECFA114F27981F3D00AE9C52 /* Kingfisher */; };
+		ECFA11522798268500AE9C52 /* InfoPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA11512798268500AE9C52 /* InfoPokemonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		ECFA11412798090C00AE9C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECFA114727980C6A00AE9C52 /* PokemonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonResponse.swift; sourceTree = "<group>"; };
 		ECFA11492798102700AE9C52 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		ECFA11512798268500AE9C52 /* InfoPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPokemonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				ECFA113E2798090C00AE9C52 /* LaunchScreen.storyboard */,
 				ECFA11412798090C00AE9C52 /* Info.plist */,
 				ECFA11492798102700AE9C52 /* PokemonTableViewCell.swift */,
+				ECFA11512798268500AE9C52 /* InfoPokemonViewController.swift */,
 			);
 			path = Pokeapp;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFA11522798268500AE9C52 /* InfoPokemonViewController.swift in Sources */,
 				ECFA114827980C6A00AE9C52 /* PokemonResponse.swift in Sources */,
 				ECFA11382798090900AE9C52 /* ViewController.swift in Sources */,
 				ECFA11342798090900AE9C52 /* AppDelegate.swift in Sources */,

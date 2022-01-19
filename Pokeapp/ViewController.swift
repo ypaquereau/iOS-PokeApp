@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     @IBAction func onClickGeneratePokemons(_ sender: Any) {
@@ -49,7 +50,7 @@ class ViewController: UIViewController {
                             typesConcat.append(type.type?.name ?? "Aucun type")
                         }
                         
-                        let tempPokemon = Pokemon(name: pokemonresponse.name, sprites: pokemonresponse.sprites?.front_default, types: typesConcat.joined(separator: ", "))
+                        let tempPokemon = Pokemon(id: pokemonresponse.id, name: pokemonresponse.name, sprite: pokemonresponse.sprites?.front_default, types: typesConcat.joined(separator: ", "), sprite_shiny: pokemonresponse.sprites?.front_shiny, height: pokemonresponse.height, weight: pokemonresponse.weight)
                     
                         self?.pokemons.append(tempPokemon)
                         self?.group.leave()
@@ -64,6 +65,23 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let pokemonSelected = pokemons[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "InfoPokemon") as? InfoPokemonViewController
+        vc?.pokemonInfo = pokemonSelected
+        
+        if let vc = vc {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+}
+
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,6 +92,7 @@ extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let pokemon = pokemons[indexPath.row]
@@ -82,13 +101,13 @@ extension ViewController: UITableViewDataSource {
         
         // Get the image
         
-        let url = URL(string: pokemon.sprites ?? "https://pngimg.com/uploads/pokeball/pokeball_PNG8.png")
+        let url = URL(string: pokemon.sprite ?? "https://pngimg.com/uploads/pokeball/pokeball_PNG8.png")
         if let url = url {
             cell?.pokemonImageView.kf.setImage(with: url)
         }
         
-        cell?.pokemonNameLabel.text = pokemon.name
-        cell?.pokemonTypeLabel.text = pokemon.types
+        cell?.pokemonNameLabel.text = "Name: \(pokemon.name!)"
+        cell?.pokemonTypeLabel.text = "Type(s):  \(pokemon.types!)"
 
         if let cell = cell {
             return cell
