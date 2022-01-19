@@ -13,6 +13,10 @@
 		ECFA113B2798090900AE9C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFA11392798090900AE9C52 /* Main.storyboard */; };
 		ECFA113D2798090C00AE9C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFA113C2798090C00AE9C52 /* Assets.xcassets */; };
 		ECFA11402798090C00AE9C52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFA113E2798090C00AE9C52 /* LaunchScreen.storyboard */; };
+		ECFA114827980C6A00AE9C52 /* PokemonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA114727980C6A00AE9C52 /* PokemonResponse.swift */; };
+		ECFA114A2798102700AE9C52 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA11492798102700AE9C52 /* PokemonTableViewCell.swift */; };
+		ECFA114D2798119300AE9C52 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ECFA114C2798119300AE9C52 /* Alamofire */; };
+		ECFA115027981F3D00AE9C52 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ECFA114F27981F3D00AE9C52 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		ECFA113C2798090C00AE9C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECFA113F2798090C00AE9C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECFA11412798090C00AE9C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFA114727980C6A00AE9C52 /* PokemonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonResponse.swift; sourceTree = "<group>"; };
+		ECFA11492798102700AE9C52 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFA115027981F3D00AE9C52 /* Kingfisher in Frameworks */,
+				ECFA114D2798119300AE9C52 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 		ECFA11322798090900AE9C52 /* Pokeapp */ = {
 			isa = PBXGroup;
 			children = (
+				ECFA114727980C6A00AE9C52 /* PokemonResponse.swift */,
 				ECFA11332798090900AE9C52 /* AppDelegate.swift */,
 				ECFA11352798090900AE9C52 /* SceneDelegate.swift */,
 				ECFA11372798090900AE9C52 /* ViewController.swift */,
@@ -63,6 +72,7 @@
 				ECFA113C2798090C00AE9C52 /* Assets.xcassets */,
 				ECFA113E2798090C00AE9C52 /* LaunchScreen.storyboard */,
 				ECFA11412798090C00AE9C52 /* Info.plist */,
+				ECFA11492798102700AE9C52 /* PokemonTableViewCell.swift */,
 			);
 			path = Pokeapp;
 			sourceTree = "<group>";
@@ -83,6 +93,10 @@
 			dependencies = (
 			);
 			name = Pokeapp;
+			packageProductDependencies = (
+				ECFA114C2798119300AE9C52 /* Alamofire */,
+				ECFA114F27981F3D00AE9C52 /* Kingfisher */,
+			);
 			productName = Pokeapp;
 			productReference = ECFA11302798090900AE9C52 /* Pokeapp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,10 @@
 				Base,
 			);
 			mainGroup = ECFA11272798090900AE9C52;
+			packageReferences = (
+				ECFA114B2798119300AE9C52 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ECFA114E27981F3D00AE9C52 /* XCRemoteSwiftPackageReference "kingfisher" */,
+			);
 			productRefGroup = ECFA11312798090900AE9C52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFA114827980C6A00AE9C52 /* PokemonResponse.swift in Sources */,
 				ECFA11382798090900AE9C52 /* ViewController.swift in Sources */,
 				ECFA11342798090900AE9C52 /* AppDelegate.swift in Sources */,
+				ECFA114A2798102700AE9C52 /* PokemonTableViewCell.swift in Sources */,
 				ECFA11362798090900AE9C52 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +378,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECFA114B2798119300AE9C52 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		ECFA114E27981F3D00AE9C52 /* XCRemoteSwiftPackageReference "kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECFA114C2798119300AE9C52 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECFA114B2798119300AE9C52 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		ECFA114F27981F3D00AE9C52 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECFA114E27981F3D00AE9C52 /* XCRemoteSwiftPackageReference "kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECFA11282798090900AE9C52 /* Project object */;
 }
